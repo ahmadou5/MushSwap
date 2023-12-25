@@ -1,5 +1,5 @@
 import { ChainId, Token, WBNB, WNATIVE } from '@pancakeswap/sdk'
-import { bscTokens, bscTestnetTokens, BUSD, USDC, USDT } from '@pancakeswap/tokens'
+import { bscTokens, bscTestnetTokens, fonchainTokens, BUSD, USDC, USDT } from '@pancakeswap/tokens'
 
 import { ChainMap, ChainTokenList } from '../types'
 
@@ -8,11 +8,13 @@ export const ROUTER_ADDRESS: ChainMap<string> = {
   [ChainId.GOERLI]: '0x3BC722f252C7bAE2f55647e49aDcB9d33Ff6eBcC',
   [ChainId.BSC]: '0x10ED43C718714eb63d5aA57B78B54704E256024E',
   [ChainId.BSC_TESTNET]: '0xD99D1c33F9fC3444f8101754aBC46c52416550D1',
+  [ChainId.FON_CHAIN]: '0x0b9e480696d354Fc4103f9a8D62D2d9e2672A152'
 }
 
 export const STABLE_SWAP_INFO_ADDRESS: ChainMap<string> = {
   [ChainId.ETHEREUM]: '',
   [ChainId.GOERLI]: '',
+  [ChainId.FON_CHAIN]: '',
   [ChainId.BSC]: '0xa680d27f63Fa5E213C502d1B3Ca1EB6a3C1b31D6',
   [ChainId.BSC_TESTNET]: '0xaE6C14AAA753B3FCaB96149e1E10Bc4EDF39F546',
 }
@@ -27,6 +29,7 @@ export const BASES_TO_CHECK_TRADES_AGAINST: ChainTokenList = {
     WBNB[ChainId.ETHEREUM],
   ],
   [ChainId.GOERLI]: [WNATIVE[ChainId.GOERLI], USDC[ChainId.GOERLI], BUSD[ChainId.GOERLI]],
+  [ChainId.FON_CHAIN]: [WNATIVE[ChainId.FON_CHAIN], USDC[ChainId.FON_CHAIN], BUSD[ChainId.FON_CHAIN]],
   [ChainId.BSC]: [
     bscTokens.wbnb,
     bscTokens.cake,
@@ -70,6 +73,7 @@ export const SUGGESTED_BASES: ChainTokenList = {
   [ChainId.ETHEREUM]: [USDC[ChainId.ETHEREUM], WBNB[ChainId.ETHEREUM], BUSD[ChainId.ETHEREUM], USDT[ChainId.ETHEREUM]],
   [ChainId.GOERLI]: [USDC[ChainId.GOERLI], WNATIVE[ChainId.GOERLI], BUSD[ChainId.GOERLI]],
   [ChainId.BSC]: [bscTokens.busd, bscTokens.cake, bscTokens.btcb],
+  [ChainId.FON_CHAIN]: [fonchainTokens.weth, fonchainTokens.usdt,fonchainTokens.mush],
   [ChainId.BSC_TESTNET]: [bscTestnetTokens.wbnb, bscTestnetTokens.cake, bscTestnetTokens.busd],
 }
 
@@ -85,6 +89,7 @@ export const BASES_TO_TRACK_LIQUIDITY_FOR: ChainTokenList = {
   [ChainId.GOERLI]: [USDC[ChainId.GOERLI], WNATIVE[ChainId.GOERLI], BUSD[ChainId.GOERLI]],
   [ChainId.BSC]: [bscTokens.wbnb, bscTokens.dai, bscTokens.busd, bscTokens.usdt, bscTokens.cake],
   [ChainId.BSC_TESTNET]: [bscTestnetTokens.wbnb, bscTestnetTokens.cake, bscTestnetTokens.busd],
+  [ChainId.FON_CHAIN]: [fonchainTokens.weth, fonchainTokens.mush],
 }
 
 export const PINNED_PAIRS: {
@@ -96,6 +101,11 @@ export const PINNED_PAIRS: {
     [WBNB[ChainId.ETHEREUM], BUSD[ChainId.ETHEREUM]],
     [WBNB[ChainId.ETHEREUM], USDT[ChainId.ETHEREUM]],
     [WBNB[ChainId.ETHEREUM], WNATIVE[ChainId.ETHEREUM]],
+  ],
+  [ChainId.FON_CHAIN]: [
+    [fonchainTokens.weth, fonchainTokens.mush],
+    [fonchainTokens.weth, fonchainTokens.usdt]
+    
   ],
   [ChainId.BSC]: [
     [bscTokens.cake, bscTokens.wbnb],

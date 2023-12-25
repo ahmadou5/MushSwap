@@ -1,8 +1,8 @@
 import { BinanceWalletConnector } from '@pancakeswap/wagmi/connectors/binanceWallet'
 import { BloctoConnector } from '@pancakeswap/wagmi/connectors/blocto'
 import { TrustWalletConnector } from '@pancakeswap/wagmi/connectors/trustWallet'
-import { bsc, bscTestnet, goerli, mainnet } from 'wagmi/chains'
-import { configureChains, createClient } from 'wagmi'
+import { bsc, bscTestnet, gnosis, goerli, mainnet } from 'wagmi/chains'
+import { Chain, configureChains, createClient } from 'wagmi'
 import memoize from 'lodash/memoize'
 import { CoinbaseWalletConnector } from 'wagmi/connectors/coinbaseWallet'
 import { InjectedConnector } from 'wagmi/connectors/injected'
@@ -12,7 +12,37 @@ import { LedgerConnector } from 'wagmi/connectors/ledger'
 import { jsonRpcProvider } from 'wagmi/providers/jsonRpc'
 import { SafeConnector } from './safeConnector'
 
-const CHAINS = [bsc, mainnet, bscTestnet, goerli]
+
+const FonSmartChain:Chain = {
+  id: 201022,
+  name: "Fon Smart Chain",
+  network: "FON",
+  nativeCurrency: { name: "FON", symbol: "FON", decimals: 18 },
+  rpcUrls: {
+    alchemy: {
+      http: ["hhttps://fsc-dataseed1.fonscan.io"],
+      webSocket: ["wss://fsc-dataseed1.fonscan.io"]
+    },
+    infura: {
+      http: ["https://fsc-dataseed1.fonscan.io"],
+      webSocket: ["wss://fsc-dataseed1.fonscan.io"]
+    },
+    default: {
+      http: ["https://fsc-dataseed1.fonscan.io"]
+    }
+  },
+  blockExplorers: {
+    etherscan: { name: "Fonscan", url: "https://fonscan.io" },
+    default: { name: "Fonscan", url: "https://fonscan.io" }
+  },
+  contracts: {
+    multicall3: {
+      address: "0xB289e7b820F9b85e28156232085da7307795934f",
+      blockCreated: 12282180
+    }
+  }
+};
+const CHAINS = [bsc, FonSmartChain]
 
 const getNodeRealUrl = (networkName: string) => {
   let host = null

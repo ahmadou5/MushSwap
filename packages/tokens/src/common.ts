@@ -18,9 +18,27 @@ export const CAKE_TESTNET = new ERC20Token(
   'https://pancakeswap.finance/',
 )
 
+export const CAKE_FON = new ERC20Token(
+  ChainId.FON_CHAIN,
+  '0x3F585532DC60F9DA788119BeE49e7d52979b63FA',
+  18,
+  'MUSH',
+  'MushroomSwap Token',
+  'https://mushswap.finance/',
+)
+
 export const USDC_BSC = new ERC20Token(
   ChainId.BSC,
   '0x8AC76a51cc950d9822D68b83fE1Ad97B32Cd580d',
+  18,
+  'USDC',
+  'Binance-Peg USD Coin',
+  'https://www.centre.io/usdc',
+)
+
+export const USDC_FON = new ERC20Token(
+  ChainId.FON_CHAIN,
+  '0x0f36Ebe4b26C78f21be54C0b505918e375d00645',
   18,
   'USDC',
   'Binance-Peg USD Coin',
@@ -79,6 +97,15 @@ export const BUSD_BSC = new ERC20Token(
   'https://www.paxos.com/busd/',
 )
 
+export const BUSD_FON = new ERC20Token(
+  ChainId.FON_CHAIN,
+  '0x9a9eD7440a3850c4D7240c9FcA8B7C96802615f0',
+  18,
+  'BUSD',
+  'Binance USD',
+  'https://www.paxos.com/busd/',
+)
+
 export const BUSD_TESTNET = new ERC20Token(
   ChainId.BSC_TESTNET,
   '0xaB1a4d4f1D656d2450692D237fdD6C7f9146e814',
@@ -111,11 +138,13 @@ export const BUSD: Record<ChainId, ERC20Token> = {
   [ChainId.GOERLI]: BUSD_GOERLI,
   [ChainId.BSC]: BUSD_BSC,
   [ChainId.BSC_TESTNET]: BUSD_TESTNET,
+  [ChainId.FON_CHAIN]: BUSD_FON,
 }
 
 export const CAKE = {
   [ChainId.BSC]: CAKE_MAINNET,
   [ChainId.BSC_TESTNET]: CAKE_TESTNET,
+  [ChainId.FON_CHAIN]: CAKE_FON
 }
 
 export const USDC = {
@@ -123,6 +152,7 @@ export const USDC = {
   [ChainId.BSC_TESTNET]: USDC_TESTNET,
   [ChainId.ETHEREUM]: USDC_ETH,
   [ChainId.GOERLI]: USDC_GOERLI,
+  [ChainId.FON_CHAIN]: USDC_FON
 }
 
 export const USDT = {
