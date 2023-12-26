@@ -89,11 +89,7 @@ const Home: React.FC<React.PropsWithChildren> = () => {
         index={2}
         hasCurvedDivider={false}
       >
-        {account && chainId === ChainId.BSC && (
-          <UserBannerWrapper>
-            <UserBanner />
-          </UserBannerWrapper>
-        )}
+        
         <MultipleBanner />
         <Hero />
       </StyledHeroSection>
