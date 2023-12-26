@@ -11,7 +11,7 @@ import SalesSection from './components/SalesSection'
 import Footer from './components/Footer'
 import CakeDataRow from './components/CakeDataRow'
 import { WedgeTopLeft, InnerWedgeWrapper, OuterWedgeWrapper } from './components/WedgeSvgs'
-import MultipleBanner from './components/Banners/MultipleBanner'
+// import MultipleBanner from './components/Banners/MultipleBanner'
 
 const StyledHeroSection = styled(PageSection)`
   padding-top: 16px;
@@ -71,7 +71,7 @@ const Home: React.FC<React.PropsWithChildren> = () => {
         index={2}
         hasCurvedDivider={false}
       >
-        <MultipleBanner />
+        
         <Hero />
       </StyledHeroSection>
      

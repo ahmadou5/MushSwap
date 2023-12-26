@@ -65,21 +65,19 @@ const config: (
     },
     {
       label: t('Earn'),
-      href: '/',
+      
       icon: EarnIcon,
       fillIcon: EarnFillIcon,
       image: '/images/decorations/pe2.png',
       items: [
         {
           label: t('Farms'),
-          href: '/',
-          subLabel: t('Coming soon!'),
-          status: 'soon',
+         
         },
         {
           label: t('Pools'),
-          href: '/',
-          subLabel: t('Coming soon!'),
+         
+         
           supportChainIds: SUPPORT_ONLY_BSC,
         },
       ].map((item) => addMenuItemSupported(item, chainId)),
