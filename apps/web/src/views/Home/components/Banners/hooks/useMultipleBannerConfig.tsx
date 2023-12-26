@@ -34,7 +34,7 @@ export const useMultipleBannerConfig = () => {
   return useMemo(() => {
     const NO_SHUFFLE_BANNERS: IBannerConfig[] = [
       { shouldRender: isRenderTrustWalletCampaignBanner, banner: <TrustWalletCampaignBanner /> },
-      { shouldRender: true, banner: <AptosBanner /> },
+      { shouldRender: isRenderTrustWalletCampaignBanner, banner: <AptosBanner /> },
       {
         shouldRender: isRenderIFOBanner,
         banner: <IFOBanner />,

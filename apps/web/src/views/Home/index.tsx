@@ -71,7 +71,6 @@ const Home: React.FC<React.PropsWithChildren> = () => {
         index={2}
         hasCurvedDivider={false}
       >
-        
         <MultipleBanner />
         <Hero />
       </StyledHeroSection>
@@ -85,7 +84,6 @@ const Home: React.FC<React.PropsWithChildren> = () => {
         index={2}
         hasCurvedDivider={false}
       >
-        
         <SalesSection {...swapSectionData(t)} />
       </PageSection>
       
