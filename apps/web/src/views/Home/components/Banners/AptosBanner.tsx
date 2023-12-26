@@ -54,7 +54,7 @@ const AptosBanner = () => {
       <S.Inner>
         <S.LeftWrapper>
           
-          <AptosTitle>{t('Hello FON Project Teams!')}</AptosTitle>
+          <AptosTitle>{t('👋 Hello FON Project Teams!')}</AptosTitle>
 
           <Button
             minHeight="48px"
@@ -68,15 +68,7 @@ const AptosBanner = () => {
             <OpenNewIcon color="invertedContrast" />
           </Button>
         </S.LeftWrapper>
-        <RightWrapper>
-          <Image
-            src={Aptos}
-            alt="aptosImage"
-            width={isMobile ? 1100 : 930}
-            height={isMobile ? 250 : 231}
-            placeholder="blur"
-          />
-        </RightWrapper>
+        
       </S.Inner>
     </S.Wrapper>
   )

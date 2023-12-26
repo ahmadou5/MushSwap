@@ -85,11 +85,7 @@ const Home: React.FC<React.PropsWithChildren> = () => {
         index={2}
         hasCurvedDivider={false}
       >
-        <OuterWedgeWrapper>
-          <InnerWedgeWrapper top>
-            <WedgeTopLeft />
-          </InnerWedgeWrapper>
-        </OuterWedgeWrapper>
+        
         <SalesSection {...swapSectionData(t)} />
       </PageSection>
       
@@ -102,14 +98,7 @@ const Home: React.FC<React.PropsWithChildren> = () => {
         <SalesSection {...cakeSectionData(t)} />
         <CakeDataRow />
       </PageSection>
-      <PageSection
-        innerProps={{ style: HomeSectionContainerStyles }}
-        background="linear-gradient(180deg, #7645D9 0%, #5121B1 100%)"
-        index={2}
-        hasCurvedDivider={false}
-      >
-        <Footer />
-      </PageSection>
+      
     </>
   )
 }
