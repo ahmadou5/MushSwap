@@ -1,7 +1,7 @@
 import { BinanceWalletConnector } from '@pancakeswap/wagmi/connectors/binanceWallet'
 import { BloctoConnector } from '@pancakeswap/wagmi/connectors/blocto'
 import { TrustWalletConnector } from '@pancakeswap/wagmi/connectors/trustWallet'
-import { bsc, bscTestnet, gnosis, goerli, mainnet } from 'wagmi/chains'
+import { bsc, mainnet } from 'wagmi/chains'
 import { Chain, configureChains, createClient } from 'wagmi'
 import memoize from 'lodash/memoize'
 import { CoinbaseWalletConnector } from 'wagmi/connectors/coinbaseWallet'
@@ -42,7 +42,7 @@ const FonSmartChain:Chain = {
     }
   }
 };
-const CHAINS = [bsc, FonSmartChain]
+const CHAINS = [FonSmartChain]
 
 const getNodeRealUrl = (networkName: string) => {
   let host = null

@@ -2,16 +2,16 @@ import { TranslateFunction } from '@pancakeswap/localization'
 import { SalesSectionProps } from '.'
 
 export const swapSectionData = (t: TranslateFunction): SalesSectionProps => ({
-  headingText: t('Trade anything. No registration, no hassle.'),
-  bodyText: t('Trade any token on BNB Smart Chain in seconds, just by connecting your wallet.'),
+  headingText: t('Trade Securely.'),
+  bodyText: t('Swap any token on FON Smart Chain in seconds, just by connecting your wallet.'),
   reverse: false,
   primaryButton: {
     to: '/swap',
-    text: t('Trade Now'),
+    text: t('Swap Now'),
     external: false,
   },
   secondaryButton: {
-    to: 'https://docs.pancakeswap.finance/',
+    to: 'https:///',
     text: t('Learn'),
     external: true,
   },
@@ -20,7 +20,7 @@ export const swapSectionData = (t: TranslateFunction): SalesSectionProps => ({
     attributes: [
       { src: 'BNB', alt: t('BNB token') },
       { src: 'BTC', alt: t('BTC token') },
-      { src: 'CAKE', alt: t('CAKE token') },
+      { src: 'mush', alt: t('CAKE token') },
     ],
   },
 })
@@ -50,14 +50,14 @@ export const earnSectionData = (t: TranslateFunction): SalesSectionProps => ({
 })
 
 export const cakeSectionData = (t: TranslateFunction): SalesSectionProps => ({
-  headingText: t('CAKE makes our world go round.'),
+  headingText: t('MUSH.'),
   bodyText: t(
-    'CAKE token is at the heart of the PancakeSwap ecosystem. Buy it, win it, farm it, spend it, stake it... heck, you can even vote with it!',
+    'MUSH token is at the Native token on Mushrooms ecosystem.!',
   ),
   reverse: false,
   primaryButton: {
     to: '/swap?outputCurrency=0x0e09fabb73bd3ade0a17ecc321fd13a19e81ce82&chainId=56',
-    text: t('Buy CAKE'),
+    text: t('Buy Mush'),
     external: false,
   },
   secondaryButton: {
@@ -69,10 +69,9 @@ export const cakeSectionData = (t: TranslateFunction): SalesSectionProps => ({
   images: {
     path: '/images/home/cake/',
     attributes: [
-      { src: 'bottom-right', alt: t('Small 3d pancake') },
-      { src: 'top-right', alt: t('Small 3d pancake') },
-      { src: 'coin', alt: t('CAKE token') },
-      { src: 'top-left', alt: t('Small 3d pancake') },
+      
+      { src: 'mush', alt: t('Mush token') },
+      
     ],
   },
 })

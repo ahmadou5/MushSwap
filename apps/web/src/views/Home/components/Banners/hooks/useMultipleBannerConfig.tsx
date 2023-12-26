@@ -47,7 +47,7 @@ export const useMultipleBannerConfig = () => {
         banner: <CompetitionBanner />,
       },
       {
-        shouldRender: true,
+        shouldRender: isRenderIFOBanner,
         banner: <PerpetualBanner />,
       },
     ]
