@@ -128,10 +128,10 @@ const Hero = () => {
       >
         <Flex flex="1" flexDirection="column">
           <Heading scale="xxl" color="secondary" mb="24px">
-            {t('The moon is made of pancakes.')}
+            {t('The Fung-tastic Robust Decentralized Exchange.')}
           </Heading>
           <Heading scale="md" mb="24px">
-            {t('Trade, earn, and win crypto on the most popular decentralized platform in the galaxy.')}
+            {t('Trade Earn and Grow Your Fungible Portfolio Securely and Seamlessly on FON Smart Chain.')}
           </Heading>
           <Flex>
             {!account && <ConnectWalletButton mr="8px" />}
