@@ -128,7 +128,7 @@ const Hero = () => {
       >
         <Flex flex="1" flexDirection="column">
           <Heading scale="xxl" color="secondary" mb="24px">
-            {t('The Fung-tastic Robust Decentralized Exchange.')}
+            {t('The Fung-tastic Robust Dex.')}
           </Heading>
           <Heading scale="md" mb="24px">
             {t('Trade Earn and Grow Your Fungible Portfolio Securely and Seamlessly on FON Smart Chain.')}
