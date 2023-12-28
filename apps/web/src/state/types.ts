@@ -9,10 +9,10 @@ import { CampaignType, FetchStatus, LotteryStatus, LotteryTicket, Team, Translat
 import { NftToken } from './nftMarket/types'
 
 export enum GAS_PRICE {
-  default = '60',
-  fast = '60',
-  instant = '60',
-  testnet = '60',
+  default = '100',
+  fast = '100',
+  instant = '100',
+  testnet = '100',
 }
 
 export const GAS_PRICE_GWEI = {
